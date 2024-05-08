@@ -97,6 +97,8 @@ class MainActivity : ComponentActivity() {
                 viewModel.uiState
                     .onEach { uiState = it }
                     .collect()
+                    AppCenter.start(application, "{403ce7536d481ddcaa377089bf63e78581490c5f}",
+                     Analytics::class.java, Crashes::class.java)
             }
         }
 
@@ -169,14 +171,6 @@ class MainActivity : ComponentActivity() {
         super.onPause()
         lazyStats.get().isTrackingEnabled = false
     }
-    override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-
-    setContent {
-        AppCenter.start(getApplication(), "{403ce7536d481ddcaa377089bf63e78581490c5f}",
-                  Analytics.class, Crashes.class);
-    }
-}
 }
 
 /**
