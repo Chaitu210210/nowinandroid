@@ -58,4 +58,3 @@ tasks.register("printModulePaths") {
             println(this.path)
         }
     }
-}
