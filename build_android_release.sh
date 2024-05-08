@@ -24,7 +24,7 @@ APP_OUT=$DIR/app/build/outputs
 export JAVA_HOME="$(cd $DIR/../nowinandroid-prebuilts/jdk17/linux && pwd )"
 echo "JAVA_HOME=$JAVA_HOME"
 
-export ANDROID_HOME="$(cd $DIR/../../../prebuilts/fullsdk/linux && pwd )"
+export ANDROID_HOME="/usr/lib/android-sdk/"
 echo "ANDROID_HOME=$ANDROID_HOME"
 
 echo "Copying google-services.json"
