@@ -55,9 +55,9 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.microsoft.appcenter.AppCenter;
-import com.microsoft.appcenter.analytics.Analytics;
-import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 
 private const val TAG = "MainActivity"
 
@@ -97,8 +97,10 @@ class MainActivity : ComponentActivity() {
                 viewModel.uiState
                     .onEach { uiState = it }
                     .collect()
-                    AppCenter.start(application, "{403ce7536d481ddcaa377089bf63e78581490c5f}",
-                     Analytics::class.java, Crashes::class.java)
+                    AppCenter.start(
+                        application, "{403ce7536d481ddcaa377089bf63e78581490c5f}",
+                     Analytics::class.java, Crashes::class.java
+                    )
             }
         }
 
