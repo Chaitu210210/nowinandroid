@@ -131,9 +131,9 @@ dependencies {
     androidTestImplementation(libs.hilt.android.testing)
 
     baselineProfile(projects.benchmarks)
-    val appCenterSdkVersion = '5.0.4'
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}";
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}";
+    val appCenterSdkVersion = "5.0.4"
+    implementation ("com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}")
+    implementation ("com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}")
 }
 
 baselineProfile {
