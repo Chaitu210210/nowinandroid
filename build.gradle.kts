@@ -27,6 +27,10 @@ buildscript {
             exclude(group = "com.google.protobuf")
         }
     }
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions.incremental = false
+}
+
 
 }
 
@@ -57,5 +61,13 @@ tasks.register("printModulePaths") {
         if (subprojects.size == 0) {
             println(this.path)
         }
+    }
+}
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions.incremental = false
+}
+buildscript {
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:<version>"
     }
 }
