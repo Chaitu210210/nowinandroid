@@ -27,11 +27,6 @@ buildscript {
             exclude(group = "com.google.protobuf")
         }
     }
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).configureEach {
-    kotlinOptions {
-        incremental = false
-    }
-}
 }
 
 // Lists all plugins used throughout the project
