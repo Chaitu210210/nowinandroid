@@ -66,8 +66,3 @@ tasks.register("printModulePaths") {
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
     kotlinOptions.incremental = false
 }
-buildscript {
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:<version>"
-    }
-}
