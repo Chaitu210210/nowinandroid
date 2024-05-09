@@ -29,7 +29,7 @@ buildscript {
     }
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).configureEach {
     kotlinOptions {
-        incremental = false
+        this.incremental = false
     }
 }
 }
