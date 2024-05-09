@@ -27,9 +27,9 @@ buildscript {
             exclude(group = "com.google.protobuf")
         }
     }
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).configureEach {
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).configureEach {
     kotlinOptions {
-        this.incremental = false
+        incremental = false
     }
 }
 }
